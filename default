@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJYkdaUHBqWGkxMHN3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNE1qa3dNVFE0TVRaYUZ3MHpNekE0TWpZd01UUTRNVFphTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUMrVWppNk1KcUgxWGJrYVVIN2I2VWZ4NVNuWS9mSzlDcWFEaWo4VkxDcitZTytFZXVQbUUrcEp2bTYKV1dUQ1pocGN5WnplZXJPOW1aTmJtb2ZWK3M3N2JMQXZzd2h3dmNRd3VXa3FaRXhsUGJqb2xRNVdKSG12RUNJQgo0czJUMURTcTBZTkx1blp1SGZDdFJ5SFBsNDRhY0FDZDM3MUVuTnJNa2I5d3NTOG1EL0tLbDRJbGY0S0pjam9yCnY3STNzOVdlYWVHaDlXa0VRbU1GT1p0dVUrZEtpVHVHK0UvQWtqNHJFWFFWS3N0a3cvNUhWeTkxNXh0Q2FvL2gKbDlHZ2tCcWZVaWpoVWk1NHNZODNLTE9sb1M0MUlyeVlLcW9MNEg3WHVvbWs2V2RIbFNPNmFIc2IyQWtkc1BTQwppN2ZxWGlEK1BXcEVSaDE4MXMyMlgzVFNpS3JyQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJUSGlZSEZRWVdBOE1aVnl0UHQ2RDRYdTFxMGNEQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQXN5SW5vUUxjMAprczFSN3hoak9Mb1JHeTk5UWVrSXd3TnNwNENtSDBRZ0E3eXltUlZMRkkvMnp4L24zaVFzbS9QQk45VWg4azVYClpzNlpnL0gzY3hSK3h2cFd3NTg4ZWtmdXEydUxOUTExV0IxclNFbCs1blRWRkVXYzhoNUhvRDFLVnhEa2lRVUwKd0NjR3FYYzN2TExEVW5RVDNna09NeVQwWFF0QittMEN6dlpiRnNLeEY1dTIzMW1CUUFaVHFBb25wSndwaVZROQoyOEN3bUplRUFIaE4rL1R3dTdRd2hkVDQzSTJaNTc5UGhodTFmVEtPQjg0ZFNVZDJqQ1pkYmgweWcrYk9sVTJMCmZTS1J3bUpSM25kbXI2cDQxVHdOUDFwTUwyalpuRXBtME1qemUxc0h4cFgzdDZRRENteWpVK05Oemc0NVpsN2gKb0NUQXVHY1RvNlVlCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://F27B5E411E0B92164A56A2432C585B87.yl4.us-west-1.eks.amazonaws.com
+  name: arn:aws:eks:us-west-1:237571996778:cluster/cloud-native-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:us-west-1:237571996778:cluster/cloud-native-cluster
+    user: arn:aws:eks:us-west-1:237571996778:cluster/cloud-native-cluster
+  name: arn:aws:eks:us-west-1:237571996778:cluster/cloud-native-cluster
+current-context: arn:aws:eks:us-west-1:237571996778:cluster/cloud-native-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-west-1:237571996778:cluster/cloud-native-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-west-1
+      - eks
+      - get-token
+      - --cluster-name
+      - cloud-native-cluster
+      command: aws
